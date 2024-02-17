@@ -39,18 +39,14 @@
             'scissors'
         ];
 
-        let savedComputerSelection;
-
-
-        let inputUser = prompt('Please type either rock, paper or scissors');
-        let playerSelection = inputUser.toUpperCase();
-
-        getComputerChoice()
-        console.log(playRound(playerSelection, savedComputerSelection));
+       playGame();
+       
+        
+        
 
 
         
-        
+        // computer decides on their choice from array
         function getComputerChoice(){
             let choiceIndex = Math.floor(Math.random() * choiceArray.length);
             let computerSelection = choiceArray[choiceIndex];
@@ -59,14 +55,9 @@
             return savedComputerSelection;
         }
        
-        /* 
-        function getPlayerSelection(playerSelection) {
-            console.log('You have selected: ', playerSelection.toUpperCase());
-            savedPlayerSelection = playerSelection.toUpperCase();
-            return savedPlayerSelection;
-        }
-        */
+   
 
+        // compare user input and computer choice, return results
         function playRound(playerSelection, savedComputerSelection){
             
             if (playerSelection === savedComputerSelection){
@@ -78,7 +69,21 @@
             } else if (playerSelection === 'PAPER' && savedComputerSelection === 'SCISSORS') {
                 console.log('Scissors beats paper - you lose!');
             } else console.log(playerSelection, ' beats ', savedComputerSelection, ' - you WIN!');
-            return;
+            
+        }
+
+        //play 5 rounds of the game
+        function playGame(){
+            for (let i = 0; i < 4; i++){
+
+            // ask for user input, convert to upper case for later comparison
+            let inputUser = prompt('Please type either rock, paper or scissors');
+            let playerSelection = inputUser.toUpperCase();
+
+            getComputerChoice();
+            playRound(playerSelection, savedComputerSelection);
+            setTimeout(5000);
+            }
         }
 
         </script>
