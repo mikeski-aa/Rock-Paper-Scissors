@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+        <script>
+            /* 
+            DECLARE user choice variable empty string
+            DECLARE computer choice variable empty string
+
+            GENERATE computer choice
+                MAKE choice array with 3 choices
+                GENERATE random number
+                ASSIGN random number as index to one of choices
+                PRINT the choice to make sure it work
+
+            INPUT user choice - either rock, paper or scissors
+            STORE user choice as declared user choice variable
+            
+            STORE computer choice as declared string
+            COMPARE user choice & computer choice
+                COMPARE LOGIC:
+                    ROCK > SCISSORS
+                    SCISSORS > PAPER
+                    PAPER > ROCK
+                IF user choice = computer choice 
+                    THEN tie
+            PRINT statement who is the winner
+            LOOP back to start
+            */
+               
+        
+        let choiceArray = [
+            'rock',
+            'paper',
+            'scissors'
+        ];
+        let savedPlayerSelection;
+        let savedComputerSelection;
+        let inputUser = prompt('Please type either rock, paper or scissors');
+
+        
+        
+
+
+        
+        
+        function getComputerChoice(){
+            let choiceIndex = Math.floor(Math.random() * choiceArray.length);
+            let computerSelection = choiceArray[choiceIndex];
+            console.log('The computer has selected ', computerSelection);
+            savedComputerSelection = computerSelection.toUpperCase();
+            return savedComputerSelection;
+        }
+            
+        function getPlayerSelection(playerSelection) {
+            console.log('You have selected: ', playerSelection.toUpperCase());
+            savedPlayerSelection = playerSelection.toUpperCase();
+            return savedPlayerSelection;
+        }
+
+        function compareChoice(savedPlayerSelection, savedComputerSelection){
+            
+            if (savedPlayerSelection === savedComputerSelection){
+                console.log('We have a tie, you both selected ', savedPlayerSelection);
+            } else if (savedPlayerSelection === 'ROCK' && savedComputerSelection === 'PAPER') {
+                console.log('Paper beats rock - you lose!');
+            } else if (savedPlayerSelection === 'SCISSORS' && savedComputerSelection === 'ROCK'){
+                console.log('Rock beats scissors - you lose!');
+            } else if (savedPlayerSelection === 'PAPER' && savedComputerSelection === 'SCISSORS') {
+                console.log('Scissors beats paper - you lose!');
+            } else console.log(savedPlayerSelection, ' beats ', savedComputerSelection, ' - you WIN!');
+        }
+
+        </script>
+    </body>
+
+</html>
