@@ -35,13 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 getComputerChoice()
                 playerSelection = 'rock';
                 playRound(playerSelection, savedComputerSelection);
+                console.log(playerScoreR, computerScoreR);
                 break;
-                
+
             case 'playerPaper':
                 console.log('Player chose Paper');
                 getComputerChoice()
                 playerSelection = 'paper';
                 playRound(playerSelection, savedComputerSelection);
+                console.log(playerScoreR, computerScoreR);
                 break;
 
             case 'playerScissors':
@@ -49,12 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 getComputerChoice()
                 playerSelection = 'scissors';
                 playRound(playerSelection, savedComputerSelection);
+                console.log(playerScoreR, computerScoreR);
                 break;
         }
     });
 });
 
+let playerScoreR = 0;
+let computerScoreR = 0;
 
+
+function tallyScore(){
+    
+    while (playerScore > 5 && computerScore > 5){
+        player
+    }
+}
 
 
 
@@ -80,13 +92,18 @@ function playRound(playerSelection, savedComputerSelection){
     
     if (playerSelection === savedComputerSelection){
         console.log('We have a tie, you both selected ', playerSelection);
+        return playerScoreR += 1, computerScoreR += 1;
     } else if (playerSelection === 'rock' && savedComputerSelection === 'paper') {
         console.log('Paper beats rock - you LOSE!');
+        return computerScoreR += 1;
     } else if (playerSelection === 'scissors' && savedComputerSelection === 'rock'){
         console.log('Rock beats scissors - you LOSE!');
+        return computerScoreR += 1;
     } else if (playerSelection === 'paper' && savedComputerSelection === 'scissors') {
         console.log('Scissors beats paper - you LOSE!');
-    } else console.log(playerSelection, ' beats ', savedComputerSelection, ' - you WIN!');
+        return computerScoreR += 1;
+    } else return playerScoreR += 1;
+
     
 }
 
