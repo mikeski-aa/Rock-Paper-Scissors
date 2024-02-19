@@ -10,10 +10,10 @@ body {
     
 }
 
-.leftSection {
+.leftSection, .rightSection {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 15%;
     margin-bottom: 25%;
 }
@@ -25,6 +25,14 @@ body {
     justify-content: space-between;
     margin-top: 15%;
     margin-bottom: 25%; 
+    text-wrap: wrap;
+    flex-grow: 0;
+    width: 30%;
+}
+
+.winnerText {
+    display: flex;
+    justify-content: center;
 }
 
 .buttons {
@@ -32,12 +40,12 @@ body {
     justify-content: space-between;
 }
 
-.rightSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 15%;
-    margin-bottom: 25%;
+.playerScore, .computerScore {
+    font-size: 45px;
 }
 
+#deleteScore {
+  
+    
+}
 
