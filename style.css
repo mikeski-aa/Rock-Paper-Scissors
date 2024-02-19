@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    margin:0;
+    padding:0;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(#e66465, #9198e5);
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+
+
+.middleSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15%;
+    margin-bottom: 25%; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+
+
