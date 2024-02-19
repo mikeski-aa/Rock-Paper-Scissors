@@ -1,12 +1,11 @@
 body {
     display: flex;
-    margin:0;
-    padding:0;
     justify-content: space-between;
     height: 100vh;
     background: linear-gradient(#e66465, #9198e5);
     margin-left: 25px;
     margin-right: 25px;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
@@ -24,10 +23,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 15%;
-    margin-bottom: 25%; 
-    text-wrap: wrap;
-    flex-grow: 0;
-    width: 30%;
+    margin-bottom: 25%;   
+    align-items: center; 
 }
 
 .winnerText {
@@ -37,7 +34,23 @@ body {
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+      
+    
+}
+
+button {
+    background-color: #F0EAD6;
+    padding: 15px;
+    border-radius: 12px; 
+    margin: 25px;
+    cursor: pointer;
+    border-color: lightgoldenrodyellow;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .playerScore, .computerScore {
@@ -45,7 +58,14 @@ body {
 }
 
 #deleteScore {
-  
-    
+    display:flex;
+    justify-content: center;
+    width: 50%;   
+}
+
+.playerScore, .computerScore {
+    justify-content: center;
+    display:flex;
+    margin-bottom: 25px;
 }
 

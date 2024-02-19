@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playerScoreDiv.textContent = "";
         computerScoreDiv.textContent = "";
         banner.textContent = "Let's play: rock, paper, scissors!"
+        document.body.setAttribute('style', 'background: linear-gradient(#e66465, #9198e5)');
         playerScoreR = 0;
         computerScoreR = 0;
     })
@@ -91,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             banner.textContent = 'WE HAVE A TIE!';
         } else if (playerScoreR === 5 && computerScoreR < 5) {
             banner.textContent = 'YOU WIN!';
+            document.body.setAttribute('style', 'background: linear-gradient(0deg, rgba(39,193,183,1) 0%, rgba(133,224,110,1) 100%)');
         } else if (playerScoreR < 5 && computerScoreR === 5) {
             banner.textContent = 'COMPUTER WINS!'; 
         }
