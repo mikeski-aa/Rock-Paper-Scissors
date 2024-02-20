@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.setAttribute('style', backgroundColor);
         playerScoreR = 0;
         computerScoreR = 0;
-        btn.setAttribute('style', 'display: visible');
+        btn.setAttribute('style', 'visibility: visible');
         startCond();
     })
     // check for win condition, change banner text
@@ -128,9 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
         savedComputerSelection = computerSelection;
         return savedComputerSelection;
     }
-
+//hide buttons
     function gameEnd(){
-        btn.setAttribute('style', 'display: none');
+        btn.setAttribute('style', 'visibility: hidden');
     }
 
     // compare user input and computer choice, return results, add tally to the score
