@@ -2,10 +2,10 @@ body {
     display: flex;
     justify-content: space-between;
     height: 100vh;
-    background: linear-gradient(#e66465, #9198e5);
+    background: linear-gradient(0deg, rgba(1,177,165,1) 0%, rgba(133,224,110,1) 100%);
     margin-left: 25px;
     margin-right: 25px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     
 }
 
@@ -15,6 +15,8 @@ body {
     justify-content: center;
     margin-top: 15%;
     margin-bottom: 25%;
+
+    
 }
 
 
@@ -25,6 +27,7 @@ body {
     margin-top: 15%;
     margin-bottom: 25%;   
     align-items: center; 
+    flex-shrink: 0;
 }
 
 .winnerText {
@@ -34,38 +37,32 @@ body {
 
 .buttons {
     display: flex;
-    
     margin-top: 50px;
-    margin-bottom: 50px;
-  
-      
-    
+    margin-bottom: 50px; 
 }
 
 button {
-    background-color: #F0EAD6;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 12px; 
     margin: 25px;
     cursor: pointer;
-    border-color: lightgoldenrodyellow;
+    border-color: rgb(0, 247, 255);
     font-size: 16px;
     font-weight: bold;
 }
 
 .playerScore, .computerScore {
     font-size: 45px;
+    justify-content: center;
+    display:flex;
 }
 
 #deleteScore {
     display:flex;
     justify-content: center;
-    width: 50%;   
+    flex-shrink: 0;  
 }
 
-.playerScore, .computerScore {
-    justify-content: center;
-    display:flex;
-    margin-bottom: 25px;
-}
+
 
